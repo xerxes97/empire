@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Nav from './components/nav/Nav.jsx'
+import Home from './components/home/Home.jsx'
+import Favorites from './components/favorites/Favorites';
+import Visual from './components/visual/visual';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <BrowserRouter>
+        <Route path="/" component={Nav} />
+        <Route exact path="/" component={Home} />
+        <Route exact path='/favorites' component={Favorites} />
+        <Route exact path='/visual/:branch' render={({match})=> <Visual section={match.params.branch}/>}/>
+      </BrowserRouter>
+    </React.Fragment>
   );
 }
 
