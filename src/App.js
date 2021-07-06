@@ -5,6 +5,7 @@ import Nav from './components/nav/Nav.jsx'
 import Home from './components/home/Home.jsx'
 import Favorites from './components/favorites/Favorites';
 import Visual from './components/visual/visual';
+import Details from './components/details/Details';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path='/favorites' component={Favorites} />
         <Route exact path='/visual/:branch' render={({match})=> <Visual section={match.params.branch}/>}/>
+        {/* <Route exact patch='/details/:id' render={({match})=> <Details id={match.params.id}/>} /> */}
       </BrowserRouter>
     </React.Fragment>
   );

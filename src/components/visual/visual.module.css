@@ -1,0 +1,14 @@
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+}
+
+.card{
+    padding: 0px 10px;
+    text-decoration: none;
+}

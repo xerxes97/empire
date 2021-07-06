@@ -2,7 +2,7 @@
 export default function Details(){
     return(
         <div>
-            componente home 
+            component Deatils
         </div>
     )
 }

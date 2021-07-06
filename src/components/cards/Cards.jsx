@@ -12,13 +12,13 @@ export default function Cards({type}){
             <Link to={`visual/${type}`}>
             <h4>{type}</h4>
             {
-                type==='Civilizaciones' ?
+                type==='civilizations' ?
                 <div><img className={style.image} src={civis} alt='Civilizaciones'/></div>
-                : type==='Unidades' ?
-                <div><img className={style.image} src={buildings} alt='Civilizaciones'/></div>
-                : type==='Edificios' ?
+                : type==='units' ?
                 <div><img className={style.image} src={units} alt='Civilizaciones'/></div>
-                : type==='Tecnologias' ?
+                : type==='structures' ?
+                <div><img className={style.image} src={buildings} alt='Civilizaciones'/></div>
+                : type==='technologies' ?
                 <div><img className={style.image} src={tech} alt='Civilizaciones'/></div>
                 : 
                 <div>omponente vacio</div>
